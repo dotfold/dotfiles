@@ -1,0 +1,4 @@
+# fix mocha output colors to work with my preferred iTerm2 theme
+# see https://github.com/mochajs/mocha/issues/802#issuecomment-36736373
+# see https://github.com/actionshrimp/dotfiles/blob/master/utils/patch-mocha-colors
+ack -li "'pass': 90" --noignore-dir=node_modules | xargs sed -i "s/'pass': 90/'pass': 92/; s/'error stack': 90/'error stack': 92/; s/'fast': 90/'fast': 92/; s/'light': 90/'light': 92/; s/'diff gutter': 90/'diff gutter': 92/; s/'diff added': 42/'diff added': 34/; s/'diff removed': 41/'diff removed': 33/"
